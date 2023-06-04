@@ -2,6 +2,9 @@
 import React from "react";
 import Link from "next/link";
 
+import styles from "./navbar.module.css";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+
 const links = [
   {
     id: 1,
@@ -37,21 +40,27 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div>
-      <Link href="/">Prathamania</Link>
-      <div>
-        {links.map((link) => (
-          <Link key={link.id} href={link.url}>
-            {link.title}
-          </Link>
-        ))}{" "}
-        <button
-          onClick={() => {
-            console.log("logout");
-          }}
-        >
-          Logout
-        </button>
+    <div className={styles.container}>
+      <Link href="/" className={styles.logo}>
+        Prathamania
+      </Link>
+      <div className={styles.right}>
+        <DarkModeToggle />
+        <div className={styles.links}>
+          {links.map((link) => (
+            <Link key={link.id} href={link.url}>
+              {link.title}
+            </Link>
+          ))}{" "}
+          <button
+            className={styles.logout}
+            onClick={() => {
+              console.log("logout");
+            }}
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </div>
   );

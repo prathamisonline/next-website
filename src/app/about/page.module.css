@@ -14,8 +14,8 @@
 
 .imgText {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 40px;
+  left: 40px;
   background-color: #53c28b;
   padding: 5px;
   color: white;
@@ -38,4 +38,14 @@
   font-size: 18px;
   font-weight: 300;
   text-align: justify;
+}
+
+.button{
+  background-color: #53c28b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  width: max-content;
+  padding: 20px;
 }

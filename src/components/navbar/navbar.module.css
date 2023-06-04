@@ -24,3 +24,8 @@
     cursor: pointer;
     border-radius: 3px;
   }
+
+.right{
+  display: flex ;
+  gap:20px;
+}  
